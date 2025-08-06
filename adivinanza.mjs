@@ -8,6 +8,7 @@ function adivinaLaLetra(){
 
     const letraSecreta = letras[Math.floor(Math.random() * letras.length)];
     
+    //Verifica si la letra es mayúscula o minúscula
     const esMayúscula = letraSecreta === letraSecreta.toUpperCase();
 
     let intentos = 0;
@@ -36,6 +37,7 @@ function adivinaLaLetra(){
 
         respuesta = respuesta.trim();
 
+        // Genera los intentos posibles
         if(respuesta.length !== 1 || !letras.includes(respuesta)){
             console.log('Ingresa una letra válida (a-z - A-Z, sin ll o ñ).');
             pedirLetra();
